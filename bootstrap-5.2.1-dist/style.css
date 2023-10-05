@@ -1,0 +1,250 @@
+[class*="title"]{
+    text-align: center;
+}
+
+[class*="svg"]{
+    font-size: 50px;
+    text-align: center;
+}
+
+[class*="para"]{
+    text-align: center;
+    max-width: 50rem;
+    margin: auto;
+    font-size: 14px;
+    line-height: 2.3rem;
+}
+
+[class*="carousel-indicators"]{
+    border-radius: 50%;
+}
+
+[class*="b-text"]{
+font-size: 1000px;
+max-width: 180rem;
+z-index: -1;
+position: absolute;
+left: 0px;
+top: -100px;
+overflow-wrap:break-word;
+}
+
+.seperator{
+    height: 200px;
+}
+
+body {
+    background-color: black;
+    background-image: url("images/BackgroundLinkedIn.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.img-c{
+    position: relative;
+    text-align: center;
+}
+
+.img-c-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+}
+
+/* Info Button */
+.infoButton{
+    font-size: 24px;
+    padding: 10px;
+}
+
+.backgroundText{
+    position: absolute;
+    z-index: -1;
+    font-size:200px;
+    top:150px;
+}
+
+.delayFloatIn{
+    animation: .7s ease 0s 1 floatIn;
+}
+
+.delayFloatInMd{
+    animation: 1s ease 0s 1 floatIn;
+}
+
+.delayFloatInLg{
+    animation: 1.3s ease 0s 1 floatIn;
+}
+
+/* 
+* Prevents issues when the parent creates a 
+* stacking context. (For example, using the transform
+* property )
+*/
+
+.infoButton:hover{
+    cursor:pointer;
+}
+
+/* Gradient Work */
+.grad1{
+    background: -webkit-linear-gradient(120deg, #3a74b4 0%, #3a58e9 25%, #721dfd 50%, #cd41fc 75%, #fc45bb 100%);
+}
+
+.grad2{
+    background: -webkit-linear-gradient(120deg, rgba(176,58,180,1) 0%, rgba(192,58,233,1) 19%, rgba(122,29,253,1) 38%, rgba(65,107,252,1) 58%, rgba(83,69,252,1) 85%);
+}
+
+.gradText{
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/*Scroll Bar*/
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    border-radius: 10px;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(66, 66, 66);
+  }
+
+.top-buffer { margin-top:10rem; }
+
+.circle {
+    z-index: 1;
+}
+
+.positioner{
+    position: relative;
+}
+
+.footer{
+    height: 200px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.background{
+    max-width: 3840px;
+    z-index: 2;
+    background-size: cover;
+    background-image: url("images/WebsiteBackground1.png") fixed center;
+}
+
+/*
+For Images in Grid Layout
+*/
+
+.detail{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    position: absolute;
+    margin-right: 0px;
+    margin-left: 0px;
+    left: 0; 
+    right: 0;
+    padding: 2rem;
+    background: linear-gradient(90deg, rgba(21, 21, 21, 0.98) 0%, rgba(9, 9, 9, 0.98) 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.25s ease-out;
+}
+
+.detail > * {
+    transform: translateY(20px);
+    transition: transform .25s ease-out;
+}
+
+.detail:hover{
+    opacity: 1;
+}
+
+.detail:hover >*{
+    transform: translateY(0);
+}
+
+.tableWrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 3840px;
+    padding: 8%;
+    padding-top:0%;
+    padding-bottom: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hidden{
+    visibility: visible;
+    display: auto;
+}
+
+.show{
+    visibility: hidden;
+    display: none;
+}
+
+@media only screen and (max-width: 800px){
+    .table{
+        visibility: hidden;
+        display: none;
+    }
+
+    .detail{
+        pointer-events: none;
+    }
+
+    .hidden{
+        visibility: none;
+        display: none;
+    }
+
+    .show{
+        visibility: visible;
+        display: block;
+    }
+
+    body{
+        background-image: none;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+    }
+
+    .seperator{
+        height: 0px;
+    }
+}
+
+/*Animations*/
+@keyframes floatIn {
+    0% {
+        opacity: 0;
+      transform: translatey(100%);
+    }
+    100% {
+        opacity: 1;
+      transform: translatey(0);
+    }
+}
